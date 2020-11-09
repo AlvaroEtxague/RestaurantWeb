@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Lato:wght@100;300;400;700;900&family=Roboto:wght@100;300;400;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background: url('../images/grill001.jfif') no-repeat center center/cover;
+}
+
+/*----------------------HEADER*/
+header {
+  border: 1px solid red;
+  height: 120px;
+  text-align: center;
+  margin-top: 20px;
+  color: #dfe6e9;
+}
+
+.nav-area {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.logo-area {
+  border: 1px solid red;
+}
+
+.logo-area h1 {
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 25px;
+  margin: 15px 0;
+}
+
+.logo-area h4 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  margin: 15px 0;
+}
+
+.links-area {
+  border: 1px solid red;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.links-area a {
+  font-family: 'Lato', sans-serif;
+  color: #dfe6e9;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.links-area i {
+  font-size: 30px;
+  padding-right: 10px;
+}
+
+/*----------------------MAIN*/
+main {
+  border: 1px solid red;
+  height: 600px;
+  text-align: center;
+  padding: 80px 150px;
+  color: #dfe6e9;
+}
+
+main h2 {
+  text-transform: lowercase;
+  font-size: 30px;
+}
+
+main p {
+  font-size: 1.2rem;
+}
+
+main a {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: large;
+  color: #ff7675;
+}
+
+main a:hover {
+  text-decoration: none;
+  font-size: large;
+  color: #74b9ff;
+}
+
+/*----------------------FOOTER*/
+footer {
+  border: 1px solid red;
+  background: lightgrey;
+  height: 100px;
+  color: black;
+}
+
+/*----------------------UTILITIES*/
+.uppercase {
+  text-transform: uppercase;
+}
