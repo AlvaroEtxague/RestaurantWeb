@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Poppins:wght@100;200;300;400;500;600;700&family=Raleway:wght@100;200;300;400;500;600&display=swap');
 
 /* 
 font-family: 'Amatic SC', cursive;
@@ -13,6 +13,117 @@ font-family: 'Poppins', sans-serif;
 
 body {
   font-family: 'Poppins', sans-serif;
+}
+
+/* --------------------------------------------navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  min-height: 10vh;
+}
+
+.logo {
+  padding: 20px;
+}
+
+.logo-main {
+  font-family: 'Amatic SC', cursive;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+
+.logo-sub {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.nav-links {
+  margin-right: 1rem;
+}
+
+.nav-links ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links li:hover {
+  background-color: #636e72;
+}
+
+.nav-links li a {
+  padding: 1.5rem;
+  display: block;
+}
+
+.toggle-burger i {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 30px;
+}
+
+/*--------------------main-section*/
+.main-section {
+  padding: 10vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  left: 0px;
+  height: 80vh;
+  top: 10vh;
+  background: url('../images/grill001.jfif') no-repeat center center/cover;
+}
+
+.main-section a {
+  font-size: large;
+  margin: 10px 0;
+}
+
+.main-section i {
+  display: block;
+  margin: 10px 0;
+}
+
+.main-section p {
+  color: #b2bec3;
+}
+
+/*----------------------------footer*/
+.foot {
+  height: 10vh;
+}
+
+.social-links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  min-height: 10vh;
+  width: 40%;
+  margin: auto;
+  font-size: 30px;
+}
+
+.social-item {
+  list-style: none;
+}
+
+.social-item a {
 }
 
 /*--------------------------------colors*/
@@ -45,7 +156,7 @@ body {
 }
 
 /*------------------------Utilities*/
-.no-decoration {
+.no-deco {
   text-decoration: none;
 }
 
@@ -53,149 +164,68 @@ body {
   display: none;
 }
 
-/* --------------------------------------------navbar */
-nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  text-align: center;
-  min-height: 10vh;
-}
-
-.logo-main {
-  font-family: 'Amatic SC', cursive;
-  font-size: 25px;
-  text-transform: uppercase;
-  font-weight: bolder;
-}
-
-.logo-sub {
-  font-size: 15px;
-  text-transform: uppercase;
-  font-weight: 300;
-}
-
-.links {
-  display: flex;
-  justify-content: space-around;
-  width: 40%;
-}
-
-.nav-item {
-  list-style: none;
-}
-
-.burger i {
-  width: 50px;
-  height: 50px;
-  padding: 10px;
-  text-align: center;
-  border-radius: 50%;
-  font-size: 30px;
-}
-
-/*--------------------main-section*/
-.main-section {
-  padding: 10vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  left: 0px;
-  height: 80vh;
-  top: 10vh;
-  background: url('../images/grill001.jfif') no-repeat center center/cover;
-}
-
-.overlay {
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.7);
-  top: 10vh;
-  left: 0;
-  width: 100%;
-  height: 80vh;
-}
-
-.main-section a {
-  z-index: 1;
-  font-size: large;
-  margin: 10px 0;
-}
-
-.main-section i {
-  display: block;
-  margin: 10px 0;
-}
-
-.main-section p {
-  z-index: 1;
-  color: #b2bec3;
-}
-
-/*----------------------------footer*/
-.foot {
-  height: 10vh;
-}
-
-.social-links {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  text-align: center;
-  min-height: 10vh;
-  width: 40%;
-  margin: auto;
-  font-size: 30px;
-}
-
-.social-item {
-  list-style: none;
-}
-
-.social-item a {
+/*--------------------------------hover.css*/
+.hvr-sweep-to-bottom::before {
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 /*-------------------------breakpoints*/
 /* Small devices (landscape phones, less than 768px) */
 @media (max-width: 768px) {
   body {
-    overflow-x: hidden;
+    overflow: hidden;
   }
 
-  .links {
-    position: absolute;
-    right: 0px;
-    height: 80vh;
-    top: 10vh;
+  .toggle-burger {
     display: flex;
-    background-color: #2d3436;
-    flex-direction: column;
-    align-items: center;
-    width: 50%;
-    transform: translateX(100%);
-    transition: transform 0.5s ease-in;
-    z-index: 2;
-  }
-
-  .burger {
-    display: block;
     cursor: pointer;
   }
-}
 
-.nav-active {
-  transform: translateX(0%);
-}
-
-/* Extra small devices (portrait phones, less than 576px) */
-@media (max-width: 575.98px) {
-  .links {
-    width: 100%;
-    background-color: #ffeaa7;
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
   }
-  .nav-item a {
+
+  .nav-links {
+    display: none;
+    width: 100%;
+  }
+
+  .nav-links ul {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .nav-links li {
+    text-align: center;
+  }
+
+  .nav-links li a {
+    font-family: 'Raleway', sans-serif;
     color: #2d3436;
-    font-size: larger;
-    font-weight: 700;
+    font-weight: 300;
+    padding: 2rem 1rem;
+  }
+
+  .nav-links li a:hover {
+    color: #dfe6e9;
+    font-weight: 400;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .box-1 {
+    background-color: #ffeaa7;
+    font-size: 30px;
+  }
+  .box-2 {
+    background-color: #fdcb6e;
+    font-size: 30px;
+  }
+  .box-3 {
+    background-color: #e17055;
+    font-size: 30px;
   }
 }

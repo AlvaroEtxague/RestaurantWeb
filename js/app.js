@@ -1,11 +1,6 @@
-const navSlide = () => {
-  const burger = document.querySelector('.burger');
-  const nav = document.querySelector('.links');
-  const mainSection = document.querySelector('.main-section');
+const burgerIcon = document.querySelector('.toggle-burger-icon');
+const nav = document.querySelector('.nav-links');
 
-  burger.addEventListener('click', () => {
-    nav.classList.toggle('nav-active');
-  });
-};
-
-navSlide();
+burgerIcon.addEventListener('click', () => {
+  nav.classList.toggle('active');
+});
