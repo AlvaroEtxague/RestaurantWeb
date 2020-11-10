@@ -1,110 +1,201 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Lato:wght@100;300;400;700;900&family=Roboto:wght@100;300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+/* 
+font-family: 'Amatic SC', cursive;
+font-family: 'Poppins', sans-serif; 
+*/
 
 * {
   margin: 0;
   padding: 0;
-  /* box-sizing: border-box; */
-}
-
-html {
-  height: 100%;
+  box-sizing: border-box;
 }
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Poppins', sans-serif;
+}
+
+/*--------------------------------colors*/
+.bg-primary-color {
+  background-color: #d63031;
+}
+
+.bg-secondary-color {
+  background-color: #81ecec;
+}
+
+.bg-light-color {
+  background-color: #dfe6e9;
+}
+
+.bg-grey-color {
+  background-color: #b2bec3;
+}
+
+.bg-dark-color {
+  background-color: #2d3436;
+}
+
+.light-color {
+  color: #dfe6e9;
+}
+
+.dark-color {
+  color: #2d3436;
+}
+
+/*------------------------Utilities*/
+.no-decoration {
+  text-decoration: none;
+}
+
+.hidden {
+  display: none;
+}
+
+/* --------------------------------------------navbar */
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  min-height: 10vh;
+}
+
+.logo-main {
+  font-family: 'Amatic SC', cursive;
+  font-size: 25px;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+
+.logo-sub {
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.links {
+  display: flex;
+  justify-content: space-around;
+  width: 40%;
+}
+
+.nav-item {
+  list-style: none;
+}
+
+.burger i {
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 30px;
+}
+
+/*--------------------main-section*/
+.main-section {
+  padding: 10vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  left: 0px;
+  height: 80vh;
+  top: 10vh;
   background: url('../images/grill001.jfif') no-repeat center center/cover;
 }
 
-/*----------------------HEADER*/
-header {
-  border: 1px solid red;
-  height: 120px;
-  text-align: center;
-  margin-top: 20px;
-  color: #dfe6e9;
+.overlay {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
+  top: 10vh;
+  left: 0;
+  width: 100%;
+  height: 80vh;
 }
 
-.nav-area {
-  margin: 0;
-  padding: 0;
-  height: 100%;
+.main-section a {
+  z-index: 1;
+  font-size: large;
+  margin: 10px 0;
 }
 
-.logo-area {
-  border: 1px solid red;
+.main-section i {
+  display: block;
+  margin: 10px 0;
 }
 
-.logo-area h1 {
-  font-family: 'Fredericka the Great', cursive;
-  font-size: 25px;
-  margin: 15px 0;
+.main-section p {
+  z-index: 1;
+  color: #b2bec3;
 }
 
-.logo-area h4 {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
-  margin: 15px 0;
+/*----------------------------footer*/
+.foot {
+  height: 10vh;
 }
 
-.links-area {
-  border: 1px solid red;
+.social-links {
   display: flex;
-  align-items: center;
   justify-content: space-around;
-}
-
-.links-area a {
-  font-family: 'Lato', sans-serif;
-  color: #dfe6e9;
-  font-weight: 700;
-  font-size: 1.2rem;
-}
-
-.links-area i {
-  font-size: 30px;
-  padding-right: 10px;
-}
-
-/*----------------------MAIN*/
-main {
-  border: 1px solid red;
-  height: 600px;
+  align-items: center;
   text-align: center;
-  padding: 80px 150px;
-  color: #dfe6e9;
-}
-
-main h2 {
-  text-transform: lowercase;
+  min-height: 10vh;
+  width: 40%;
+  margin: auto;
   font-size: 30px;
 }
 
-main p {
-  font-size: 1.2rem;
+.social-item {
+  list-style: none;
 }
 
-main a {
-  text-transform: uppercase;
-  text-decoration: none;
-  font-size: large;
-  color: #ff7675;
+.social-item a {
 }
 
-main a:hover {
-  text-decoration: none;
-  font-size: large;
-  color: #74b9ff;
+/*-------------------------breakpoints*/
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .links {
+    position: absolute;
+    right: 0px;
+    height: 80vh;
+    top: 10vh;
+    display: flex;
+    background-color: #2d3436;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+    z-index: 2;
+  }
+
+  .burger {
+    display: block;
+    cursor: pointer;
+  }
 }
 
-/*----------------------FOOTER*/
-footer {
-  border: 1px solid red;
-  background: lightgrey;
-  height: 100px;
-  color: black;
+.nav-active {
+  transform: translateX(0%);
 }
 
-/*----------------------UTILITIES*/
-.uppercase {
-  text-transform: uppercase;
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .links {
+    width: 100%;
+    background-color: #ffeaa7;
+  }
+  .nav-item a {
+    color: #2d3436;
+    font-size: larger;
+    font-weight: 700;
+  }
 }
