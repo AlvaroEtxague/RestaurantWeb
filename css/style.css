@@ -30,12 +30,14 @@ body {
 
 .logo-main {
   font-family: 'Redressed', cursive;
+  letter-spacing: 2px;
   font-size: 4rem;
   margin: 0;
 }
 
 .logo-sub {
   font-family: 'Raleway', sans-serif;
+  letter-spacing: 2px;
   margin: 0;
   font-size: 1.5rem;
   font-weight: 300;
@@ -56,6 +58,7 @@ body {
 }
 
 .nav-links li a {
+  letter-spacing: 3px;
   padding: 1.5rem;
   display: block;
 }
@@ -122,6 +125,55 @@ body {
   list-style: none;
 }
 
+/*-------------------------------menu section*/
+.container {
+  text-align: center;
+  width: 100%;
+  padding: 25px;
+  background: url('../images/grill001.jfif') no-repeat center center/cover;
+}
+
+.menu {
+  margin: auto;
+  width: 90%;
+}
+
+h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.col h3,
+.col h4 {
+  letter-spacing: 2px;
+  font-weight: 500;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.col p {
+  margin: auto;
+  width: 60%;
+  letter-spacing: 1px;
+  line-height: 1.8;
+  font-weight: 200;
+  font-size: 18px;
+  padding-bottom: 30px;
+}
+
+hr {
+  width: 25%;
+  color: #e17055;
+  border-top: 1px dashed;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  padding-bottom: 30px;
+}
+
 /*--------------------------------colors*/
 .bg-primary-color {
   background-color: #d63031;
@@ -158,6 +210,19 @@ body {
 
 .hidden {
   display: none;
+}
+
+.row,
+.col {
+  margin: 0;
+  padding: 0;
+}
+
+.box {
+  font-family: 'Raleway', sans-serif;
+  border-radius: 5px;
+  margin: 10px 0;
+  padding: 15px;
 }
 
 /*--------------------------------hover.css*/
