@@ -17,6 +17,10 @@ body {
 
 /* --------------------------------------------navbar */
 .navbar {
+  /* position: fixed;
+  width: 100%;
+  z-index: 5; */
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -127,9 +131,10 @@ body {
 
 /*-------------------------------menu section*/
 .container {
+  min-height: 80vh;
   text-align: center;
   width: 100%;
-  padding: 25px;
+  padding: 10px;
   background: url('../images/grill001.jfif') no-repeat center center/cover;
 }
 
@@ -139,6 +144,8 @@ body {
 }
 
 h2 {
+  margin: 0;
+  padding: 10px;
   font-family: 'Poppins', sans-serif;
   font-size: 2rem;
   letter-spacing: 2px;
@@ -146,17 +153,24 @@ h2 {
   text-transform: uppercase;
 }
 
+.my-icon {
+  display: none;
+  margin: 0;
+  padding: 0;
+  font-size: 2rem;
+}
+
 .col h3,
 .col h4 {
   letter-spacing: 2px;
-  font-weight: 500;
+  font-weight: bolder;
   font-size: 18px;
   text-transform: uppercase;
 }
 
 .col p {
   margin: auto;
-  width: 60%;
+  width: 80%;
   letter-spacing: 1px;
   line-height: 1.8;
   font-weight: 200;
@@ -221,8 +235,9 @@ hr {
 .box {
   font-family: 'Raleway', sans-serif;
   border-radius: 5px;
-  margin: 10px 0;
+  margin: 10px;
   padding: 15px;
+  min-height: 110px;
 }
 
 /*--------------------------------hover.css*/
@@ -317,7 +332,23 @@ hr {
   }
 }
 
-@media (max-width: 414px), (max-height: 500px) {
+@media (max-height: 600px) {
+  .logo-sub {
+    display: none;
+  }
+
+  .nav-links li a {
+    padding: 0.75rem 0.5rem;
+  }
+
+  .toggle-burger {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+  }
+}
+
+@media (max-width: 414px) {
   .main-section a {
     font-size: 1.5rem;
     margin: 10px 0;
@@ -345,20 +376,55 @@ hr {
     top: 35px;
     right: 25px;
   }
-}
 
-@media (max-height: 600px) {
-  .logo-sub {
+  .menu {
+    width: 100%;
+  }
+
+  .container {
+    padding: 5px;
+  }
+
+  h2 {
+    padding: 5px;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+  }
+
+  .my-icon {
+    font-size: 1.5rem;
+  }
+
+  .col p {
+    width: 80%;
+  }
+
+  .my-icon {
+    display: block;
+  }
+
+  .row {
     display: none;
+    min-height: 50px;
   }
 
-  .nav-links li a {
-    padding: 0.75rem 0.5rem;
+  .starter-row.active {
+    display: block;
   }
 
-  .toggle-burger {
-    position: absolute;
-    top: 25px;
-    right: 25px;
+  .beef-row.active {
+    display: block;
+  }
+
+  .chicken-row.active {
+    display: block;
+  }
+
+  .fish-row.active {
+    display: block;
+  }
+
+  hr {
+    display: none;
   }
 }
