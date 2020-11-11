@@ -131,6 +131,7 @@ body {
 
 /*-------------------------------menu section*/
 .container {
+  min-height: 80vh;
   text-align: center;
   width: 100%;
   padding: 10px;
@@ -225,13 +226,6 @@ hr {
   display: none;
 }
 
-.row {
-  /* display: none; */
-}
-
-.col {
-}
-
 .row,
 .col {
   margin: 0;
@@ -243,7 +237,7 @@ hr {
   border-radius: 5px;
   margin: 10px;
   padding: 15px;
-  min-height: 150px;
+  min-height: 110px;
 }
 
 /*--------------------------------hover.css*/
@@ -389,6 +383,16 @@ hr {
 
   .container {
     padding: 5px;
+  }
+
+  h2 {
+    padding: 5px;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+  }
+
+  .my-icon {
+    font-size: 1.5rem;
   }
 
   .col p {
